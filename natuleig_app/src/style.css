@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(77, 76, 76, 0.3);
+    padding: 20px 0;
+}
+.navbar-group{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.navbar-list{
+    list-style-type: none;
+    display: flex;
+    
+}
+.navbar-item{
+    margin: 0 20px  ;
+}
