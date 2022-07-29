@@ -1,4 +1,5 @@
-
+import React from 'react'
+import CartWidget from './CartWidget';
 function NavBar(){
     return (
         <header>
@@ -24,6 +25,8 @@ function NavBar(){
                 <div className="navbar-group">
                     <p>Cosmetología</p>
                 </div>
+                <CartWidget type="header"/>
+                
                
             </nav>
         </header>
