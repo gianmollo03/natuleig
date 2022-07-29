@@ -1,8 +1,9 @@
 import React from "react";
 const ItemListContainer = (greeting)=>{
+    
     return(
-        <div>
-            greeting.value
+        <div id="landing-message">
+            {greeting.greeting}
         </div>
     )
 }
