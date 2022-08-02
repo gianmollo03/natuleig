@@ -1,14 +1,15 @@
 import React from "react";
+import { DiBower } from "react-icons/di";
 const CartWidget = (Logo)=>{
     
         if(Logo.type =='header'){
             return(
-                <img src="/logo192.png" alt="Logo" className="logo-header" />
+                <DiBower/>
             )
         }
         else if(Logo.type=='footer'){
             return(
-                <img src="/logo192.png" alt="Logo" className="logo-footer" />
+                <DiBower/>
             )
         }
     
