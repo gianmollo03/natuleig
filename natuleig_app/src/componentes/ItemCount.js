@@ -4,7 +4,7 @@ import { useState } from "react";
 const ItemCount =()=>{
 
 
-
+    const stock = 45
     const resultado = useState(0)
     let contador = resultado[0]
     const setContador=resultado[1]
@@ -14,6 +14,9 @@ const ItemCount =()=>{
     const aumentarContador=()=>{
         console.log("Aumentar contador")
         setContador(contador+1)
+        if(contador>=stock){
+            setContador(contador)
+        }
     }
 
 
