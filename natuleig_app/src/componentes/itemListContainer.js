@@ -5,7 +5,7 @@ const ItemListContainer = (greeting)=>{
     return(
         <div id="landing-message">
             {greeting.greeting}
-            <ItemCount/>
+            <ItemCount stock="40" initial="0" onAdd=""/>
         </div>
         
     )
