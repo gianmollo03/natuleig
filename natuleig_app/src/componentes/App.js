@@ -2,10 +2,11 @@ import React from 'react'
 import Header from "./NavBar";
 import Footer from "./footer";
 import ItemListContainer from './itemListContainer';
-
+import {ChakraProvider} from '@chakra-ui/react'
 function App(){
     return (
         <>
+        <ChakraProvider>
         <Header/>
         <main>
             <div>
@@ -16,6 +17,8 @@ function App(){
 
         <ItemListContainer greeting="Hola! Bienvenido"/>
         <Footer/>
+        </ChakraProvider>
+
         </>
     )
 }
