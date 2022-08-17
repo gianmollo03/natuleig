@@ -1,35 +1,28 @@
 import React from 'react'
 import CartWidget from './CartWidget';
+import { NavLink } from 'react-router-dom';
+import { HStack,Spacer,Link } from '@chakra-ui/react';
 function NavBar(){
     return (
-        <header>
-            <nav className="navbar">
-                <div className="navbar-group">
-                    <img src="" alt="Logo Natuleig" />
-                    <p>Natuleig</p>
-                </div>
-                <div className="navbar-group"> 
-                    <ul className="navbar-list">
-                        <li className="navbar-item">
-                            <a href="">Informacion</a>
-                        </li>
-                        <li className="navbar-item">
-                            <a href="">Productos</a>
-                        </li>
-                        <li className="navbar-item">
-                            <a href="">
-                            Consultar turno</a> 
-                        </li>
-                    </ul>
-                </div>
-                <div className="navbar-group">
-                    <p>Cosmetología</p>
-                </div>
-                <CartWidget type="header"/>
-                
-               
-            </nav>
-        </header>
+        <HStack>
+            <NavLink to="/">
+                <img src="facial.png" alt="Natuleig" width="40px" height="40px"/>
+            </NavLink>
+            <Spacer>    
+            </Spacer>
+            <HStack>
+                <NavLink className="LinksNavbarContainer" to="category/limpiador">
+                    <Link className='LinksNavbar'>Limpiadores</Link>
+                </NavLink>
+                <NavLink className="LinksNavbarContainer" to="category/exfoliantes">
+                    <Link className='LinksNavbar'>Exfoliantes</Link>
+                </NavLink>
+                <NavLink className="LinksNavbarContainer" to="consultas/consultar_turno">
+                    <Link className='LinksNavbar'>Consultar turno</Link>
+                </NavLink>
+            </HStack>
+           
+        </HStack>
     )
 }
 export default NavBar;

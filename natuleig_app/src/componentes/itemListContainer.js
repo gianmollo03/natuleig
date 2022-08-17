@@ -5,19 +5,27 @@ import { CustomFetch } from "../utiles/customFetch";
 import { useEffect,useState } from "react";
 import { ItemList } from "./ItemList";
 import { Text } from "@chakra-ui/react";
-
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = (greeting)=>{
     const  [listaProductos,setListaProductos]=useState([])
     const [loading,setLoading]=useState(true)
-
+    const {categorys} = useParams()
     useEffect(()=>{
         setLoading(true)
         CustomFetch(productos)
             .then(res => {
+                if(categorys){
+                    setLoading(false)
+                    setListaProductos(res.filter(prod => prod.categorys === categorys))
+                }else{
                 setLoading(false)
-                setListaProductos(res)})
-    },[])
+                setListaProductos(res)
+                }
+                })
+    },[categorys])
+    
+
     return(
         <div id="landing-message">
             {!loading
