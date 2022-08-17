@@ -10,20 +10,20 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = (greeting)=>{
     const  [listaProductos,setListaProductos]=useState([])
     const [loading,setLoading]=useState(true)
-    const {categorys} = useParams()
+    const {categoria} = useParams()
     useEffect(()=>{
         setLoading(true)
         CustomFetch(productos)
             .then(res => {
-                if(categorys){
+                if(categoria){
                     setLoading(false)
-                    setListaProductos(res.filter(prod => prod.categorys === categorys))
+                    setListaProductos(res.filter(prod => prod.categoria === categoria))
                 }else{
                 setLoading(false)
                 setListaProductos(res)
                 }
                 })
-    },[categorys])
+    },[categoria])
     
 
     return(

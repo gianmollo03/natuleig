@@ -11,10 +11,10 @@ function NavBar(){
             <Spacer>    
             </Spacer>
             <HStack>
-                <NavLink className="LinksNavbarContainer" to="category/limpiador">
+                <NavLink className="LinksNavbarContainer" to="categoria/limpiador">
                     <Link className='LinksNavbar'>Limpiadores</Link>
                 </NavLink>
-                <NavLink className="LinksNavbarContainer" to="category/exfoliantes">
+                <NavLink className="LinksNavbarContainer" to="categoria/exfoliantes">
                     <Link className='LinksNavbar'>Exfoliantes</Link>
                 </NavLink>
                 <NavLink className="LinksNavbarContainer" to="consultas/consultar_turno">
