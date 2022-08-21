@@ -1,6 +1,7 @@
 import React from "react"
 import { useEffect } from "react"
 import { useState } from "react"
+import { useParams } from "react-router-dom"
 
 export const ItemDetail=({listaProducto})=>{
     console.log(listaProducto)

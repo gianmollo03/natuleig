@@ -10,8 +10,10 @@ export const Item=({producto})=>{
             <Text>{producto.nombre}</Text>
             <Text>{producto.precio}$</Text>
             <Button colorScheme="red" size='xs'>
-                <NavLink to={`producto/${producto.id}`}></NavLink>
+                <NavLink to={`producto/${producto.id}`}>
                 <Link>Ver Detalle</Link>
+                </NavLink>
+                
             </Button>
         </VStack>
     )

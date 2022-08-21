@@ -4,28 +4,35 @@ import { useState } from "react";
 import { CustomFetch } from "../utiles/customFetch";
 import { ItemDetail } from "./ItemDetail";
 import {productos} from "../utiles/productos";
-import { Text } from "@chakra-ui/react";
+import { list, Text } from "@chakra-ui/react";
+import { Route, useParams } from "react-router-dom";
 
 export const ItemDetailContainer=()=>{
-    const [listaProductos,setListaProductos]=useState({})
+    const [listaProducto,setListaProducto]=useState({})
     const [loading,setLoading]=useState(true)
+    const {id} = useParams()
+ 
     useEffect(()=>{
-        setLoading(true)
+        setLoading(false)
         CustomFetch(productos)
         .then(res=>{
             setLoading(false)
-            setListaProductos(res.find(item=>item.id===1))
+            setListaProducto(res.find(item=>item.id===parseInt(id)))
             }
             )
         
-    },[])
-    console.log(listaProductos)
+    },)
+    
     return(
         <>
             {!loading
             ?
-            <ItemDetail listaProducto = {listaProductos}></ItemDetail>
+            <ItemDetail listaProducto = {listaProducto}>
+                
+            </ItemDetail>
+            
         :
+        
         <Text>Cargando...</Text>}
         </>
     )
