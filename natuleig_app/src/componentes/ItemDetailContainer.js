@@ -13,7 +13,7 @@ export const ItemDetailContainer=()=>{
     const {id} = useParams()
  
     useEffect(()=>{
-        setLoading(false)
+        setLoading(true)
         CustomFetch(productos)
         .then(res=>{
             setLoading(false)
@@ -21,7 +21,7 @@ export const ItemDetailContainer=()=>{
             }
             )
         
-    },)
+    },loading)
     
     return(
         <>

@@ -5,13 +5,13 @@ import { NavLink } from "react-router-dom";
 export const Item=({producto})=>{
     console.log(producto)
     return(
-        <VStack boxShadow='lg' p='6' rounded='md' bg='white' m='15px' minWidth='275px'>
-            <Image src={producto.image} alt={producto.nombre} w='200px'  />
-            <Text>{producto.nombre}</Text>
-            <Text>{producto.precio}$</Text>
-            <Button colorScheme="red" size='xs'>
+        <VStack boxShadow='lg' p='6' rounded='md' bg='white' m='15px' minWidth='275px' className="itemContainer">
+            <Image className="imagenItem" src={producto.image} alt={producto.nombre} w='200px' height="200px"  />
+            <Text className="nombreItem">{producto.nombre}</Text>
+            <Text className="precioItem">{producto.precio}$</Text>
+            <Button colorScheme="pink" size='xs'>
                 <NavLink to={`producto/${producto.id}`}>
-                <Link>Ver Detalle</Link>
+                <Link className="linkDetalle">Ver Detalle</Link>
                 </NavLink>
                 
             </Button>

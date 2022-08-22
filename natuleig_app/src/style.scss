@@ -2,37 +2,49 @@
     margin: 0;
     padding: 0;
 }
-.navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: rgba(77, 76, 76, 0.3);
-    padding: 20px 0;
-    .logo-header{
-        width: 100px;
-        height: 100px;
-    }
-}
-.navbar-group{
-    width: auto;
+.NavBarContainer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: #FF8FB1;
+    padding: 10px 0;
+    .NavbarLogo{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 33%;
+    }
     
-}
-.navbar-list{
-    list-style-type: none;
-    display: flex;
-    
-}
-.navbar-item{
-    margin: 0 20px  ;
+    .NavbarItems{
+        
+        width: 33%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .turnosContainer{
+        width: 33%;
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
-footer{
-    .logo-footer{
-        width: 400px;
-        height: auto;
+#listaDeItems{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    .itemContainer{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        .precioItem{
+            font-weight: bold;
+        }
+        .linkDetalle{
+            text-decoration: none;
+            color: white;
+        }
+
     }
 }
 
@@ -40,56 +52,35 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: orange;
-    
-    h2{
-        font-weight: bold;
-        font-size: 20px;
-    }
-    .detailProductName{
-        margin: 10px 0;
-        border: solid 1px black;
-        padding: 10px;
-        background-color: greenyellow;
-    }
-    .detailProductDesc{
-        width: 80%;
-        margin: 10px 0;
-    }
-}
-
-
-#landing-message{
-    display: flex;
-    background-color: yellow;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    .grupoBotonesCarritoContainer{
+    margin-top: 10px;
+    .detailProductChild{
+        width: 30%;
+        background-color: #FCE2DB;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
-        .botonesContadorContainer{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            button{
-                padding: 10px 10px;
-            }
-            *{
-                margin: 0 10px;
-            }
-            
+        h2{
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
         }
-        .botonCarritoContainer{
-            margin: 10px;
-            #botonAñadirCarrito{
-                padding: 0 10px;
-                background-color: green;
-                color: white;
-            }
+        .detailProductName{
+            font-size: 30px;
+
+        }
+        .detailProductDesc{
+            width: 65%;
+            text-align: center;
+
+        }
+        .botonAgregarCarrito{
+            background-color: #B270A2;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 20PX;
         }
     }
-}
+    
+
+    }

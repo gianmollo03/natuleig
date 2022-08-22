@@ -1,28 +1,35 @@
 import React from 'react'
 import CartWidget from './CartWidget';
+import Logo from '../images/facial.png'
 import { NavLink } from 'react-router-dom';
 import { HStack,Spacer,Link } from '@chakra-ui/react';
 function NavBar(){
     return (
-        <HStack>
+        <div className="NavBarContainer" >
+            <HStack className='NavbarLogo'>
             <NavLink to="/">
-                <img src="facial.png" alt="Natuleig" width="40px" height="40px"/>
+                <img src={Logo} alt="Natuleig" width="40px" height="40px"/>
             </NavLink>
-            <Spacer>    
-            </Spacer>
-            <HStack>
-                <NavLink className="LinksNavbarContainer" to="categoria/limpiador">
+            </HStack>
+            <HStack className='NavbarItems'>
+           
+                  <NavLink className="LinksNavbarContainer" to="categoria/limpiador">
                     <Link className='LinksNavbar'>Limpiadores</Link>
-                </NavLink>
-                <NavLink className="LinksNavbarContainer" to="categoria/exfoliantes">
+                    </NavLink>
+                
+           
+                    <NavLink className="LinksNavbarContainer" to="categoria/exfoliantes">
                     <Link className='LinksNavbar'>Exfoliantes</Link>
-                </NavLink>
+                    </NavLink>
+            
+            </HStack>
+            <HStack className='turnosContainer'>
                 <NavLink className="LinksNavbarContainer" to="consultas/consultar_turno">
                     <Link className='LinksNavbar'>Consultar turno</Link>
                 </NavLink>
             </HStack>
-           
-        </HStack>
+        </div>
+
     )
 }
 export default NavBar;

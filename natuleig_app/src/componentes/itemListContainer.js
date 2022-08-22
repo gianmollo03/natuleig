@@ -27,7 +27,7 @@ const ItemListContainer = (greeting)=>{
     
 
     return(
-        <div id="landing-message">
+        <div id="listaDeItems">
             {!loading
             ?
             <ItemList listaProductos = {listaProductos}/>
