@@ -3,6 +3,7 @@ import CartWidget from './CartWidget';
 import Logo from '../images/facial.png'
 import { NavLink } from 'react-router-dom';
 import { HStack,Spacer,Link } from '@chakra-ui/react';
+import ShoppingCart from '../images/shopping-cart.png'
 function NavBar(){
     return (
         <div className="NavBarContainer" >
@@ -26,6 +27,13 @@ function NavBar(){
             <HStack className='turnosContainer'>
                 <NavLink className="LinksNavbarContainer" to="consultas/consultar_turno">
                     <Link className='LinksNavbar'>Consultar turno</Link>
+                </NavLink>
+            </HStack>
+            <HStack>
+                <NavLink className="CarritoIconContainer" to="carrito">
+                    <Link className='CarritoIcon'>
+                        <img src={ShoppingCart} alt="Carrito de compras" width="40px" height="40px"/>
+                    </Link>
                 </NavLink>
             </HStack>
         </div>

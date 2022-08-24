@@ -1,5 +1,4 @@
 import React from "react"
-
 import ItemCount from "./ItemCount"
 
 export const ItemDetail=({listaProducto})=>{

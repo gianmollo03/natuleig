@@ -5,6 +5,7 @@ import ItemListContainer from './itemListContainer';
 import {ChakraProvider} from '@chakra-ui/react'
 import { ItemDetailContainer } from './ItemDetailContainer';
 import { BrowserRouter , Routes,Route} from "react-router-dom";
+import { CartContext } from './CartContext';
 function App(){
     return (
         <>
@@ -16,6 +17,10 @@ function App(){
             <Route path='/categoria/:categoria' element={<ItemListContainer/>}></Route>
             <Route path='/producto/:id' element={<ItemDetailContainer/>}></Route>
             <Route path='/categoria/:categoria/producto/:id' element={<ItemDetailContainer/>}></Route>
+            <Route path='/categoria/:categoria/carrito' element={<CartContext/>}></Route>
+            <Route path='/carrito' element={<CartContext/>}></Route>
+            <Route path='/producto/:id/carrito' element={<CartContext/>}></Route>
+            <Route path='/categoria/:categoria/producto/:id/carrito' element={<CartContext/>}></Route>
         </Routes>
         
         <Footer/>
