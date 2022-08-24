@@ -6,7 +6,7 @@ import { ItemDetail } from "./ItemDetail";
 import {productos} from "../utiles/productos";
 import { list, Text } from "@chakra-ui/react";
 import { Route, useParams } from "react-router-dom";
-
+import Contador from "./Counter"
 export const ItemDetailContainer=()=>{
     const [listaProducto,setListaProducto]=useState({})
     const [loading,setLoading]=useState(true)
@@ -34,6 +34,7 @@ export const ItemDetailContainer=()=>{
         :
         
         <Text>Cargando...</Text>}
+        <Contador initial={0} stock={40}></Contador>
         </>
     )
 

@@ -1,5 +1,7 @@
 import React from "react"
 
+import ItemCount from "./ItemCount"
+
 export const ItemDetail=({listaProducto})=>{
     return(
         <>
@@ -13,7 +15,7 @@ export const ItemDetail=({listaProducto})=>{
                 {listaProducto.descripcion}
             </div>
             <div>
-                <button className="botonAgregarCarrito">Agregar al carrito</button>
+                <ItemCount initial={1} stock={listaProducto.stock}></ItemCount>
             </div>
             </div>
 

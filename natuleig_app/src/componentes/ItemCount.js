@@ -5,7 +5,7 @@ const ItemCount =(props)=>{
     const stockValor = (props.stock)
     const [contador,setContador] = useState(props.initial)
     const aumentarContador=()=>{
-        if(contador>=stockValor){    
+        if(contador==stockValor){    
             console.log("El contador es o sera mayor que el stock")
         }
         else{

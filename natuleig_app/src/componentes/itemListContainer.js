@@ -6,6 +6,7 @@ import { useEffect,useState } from "react";
 import { ItemList } from "./ItemList";
 import { Text } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
+import { PageTemplate } from "./Page";
 
 const ItemListContainer = (greeting)=>{
     const  [listaProductos,setListaProductos]=useState([])
@@ -30,7 +31,9 @@ const ItemListContainer = (greeting)=>{
         <div id="listaDeItems">
             {!loading
             ?
-            <ItemList listaProductos = {listaProductos}/>
+            <PageTemplate titulo="Productos" subtitulo={categoria}>
+                | <ItemList listaProductos = {listaProductos}/>
+            </PageTemplate>
             :
             <Text>Cargando...</Text>}
             {greeting.greeting}
