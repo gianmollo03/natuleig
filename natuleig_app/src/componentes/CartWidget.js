@@ -1,25 +1,16 @@
-import React from "react";
-import { DiBower } from "react-icons/di";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import { Badge } from '@mui/material'
+
+function CartWidget (){
 
 
-const CartWidget = (Logo)=>{
-    
-        if(Logo.type =='header'){
-            return(
-                <>
-                <a href="">
-                <img src="shopping-cart.png" alt="Carrito de compras" width={40} height={40} />
-                </a>
-
-                </>
+    return(
+        <div>
                 
-            )
-        }
-        else if(Logo.type=='footer'){
-            return(
-                <DiBower/>
-            )
-        }
-    
+                <ShoppingCartIcon/>
+           
+        </div>
+    )
 }
+
 export default CartWidget

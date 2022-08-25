@@ -1,5 +1,4 @@
 import React from 'react'
-import CartWidget from './CartWidget';
 function Footer(){
     return (
         <>
@@ -14,7 +13,7 @@ function Footer(){
             <div>
                 <p>Todos los derechos reservados</p>
             </div>
-            <CartWidget type="footer"/>
+            
         </footer>
         </>
     )

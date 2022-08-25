@@ -5,7 +5,7 @@ const ItemCount =({stock,initial,onAdd})=>{
     const stockValor = stock
     const [contador,setContador] = useState(initial)
     const aumentarContador=()=>{
-        if(contador==stockValor){    
+        if(contador===stockValor){    
             console.log("El contador es o sera mayor que el stock")
         }
         else{
@@ -15,7 +15,7 @@ const ItemCount =({stock,initial,onAdd})=>{
 
 
     const disminuirContador=()=>{
-        if(contador==0){
+        if(contador===0){
             console.log("El contador sera menor que el stock")
         }
         else{

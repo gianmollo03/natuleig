@@ -4,11 +4,11 @@ import { useState } from "react";
 import { CustomFetch } from "../utiles/customFetch";
 import { ItemDetail } from "./ItemDetail";
 import {productos} from "../utiles/productos";
-import { list, Text } from "@chakra-ui/react";
-import { Route, useParams } from "react-router-dom";
+import {  Text } from "@chakra-ui/react";
+import {  useParams } from "react-router-dom";
 
 export const ItemDetailContainer=()=>{
-    const [listaProducto,setListaProducto]=useState({})
+    const [producto,setProducto]=useState({})
     const [loading,setLoading]=useState(true)
     const {id} = useParams()
  
@@ -17,7 +17,7 @@ export const ItemDetailContainer=()=>{
         CustomFetch(productos)
         .then(res=>{
             setLoading(false)
-            setListaProducto(res.find(item=>item.id===parseInt(id)))
+            setProducto(res.find(producto=>producto.id===parseInt(id)))
             }
             )
         
@@ -27,7 +27,7 @@ export const ItemDetailContainer=()=>{
         <>
             {!loading
             ?
-            <ItemDetail listaProducto = {listaProducto}>
+            <ItemDetail producto = {producto}>
                 
             </ItemDetail>
             

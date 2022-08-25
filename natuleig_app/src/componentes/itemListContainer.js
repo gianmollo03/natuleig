@@ -1,5 +1,4 @@
 import React from "react";
-import ItemCount from "./ItemCount";
 import { productos } from "../utiles/productos";
 import { CustomFetch } from "../utiles/customFetch";
 import { useEffect,useState } from "react";
