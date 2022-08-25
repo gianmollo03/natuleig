@@ -6,6 +6,10 @@ import {ChakraProvider} from '@chakra-ui/react'
 import { ItemDetailContainer } from './ItemDetailContainer';
 import { BrowserRouter , Routes,Route} from "react-router-dom";
 import { CartContext } from './CartContext';
+import {createContext} from 'react'
+
+const Contexto = createContext()
+console.log(Contexto)
 function App(){
     return (
         <>

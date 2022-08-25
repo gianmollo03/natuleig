@@ -2,6 +2,13 @@ import React from "react"
 import ItemCount from "./ItemCount"
 
 export const ItemDetail=({listaProducto})=>{
+
+    const onAdd = (contador) =>{
+        
+        listaProducto.contador = contador
+        
+        console.log(listaProducto)
+    }
     return(
         <>
            <div className="detailProductContainer">
@@ -14,7 +21,7 @@ export const ItemDetail=({listaProducto})=>{
                 {listaProducto.descripcion}
             </div>
             <div>
-                <ItemCount initial={1} stock={listaProducto.stock}></ItemCount>
+                <ItemCount initial={1} stock={listaProducto.stock} onAdd={onAdd}></ItemCount>
             </div>
             </div>
 

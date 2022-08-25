@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 
-const ItemCount =(props)=>{
-    const stockValor = (props.stock)
-    const [contador,setContador] = useState(props.initial)
+const ItemCount =({stock,initial,onAdd})=>{
+    const stockValor = stock
+    const [contador,setContador] = useState(initial)
     const aumentarContador=()=>{
         if(contador==stockValor){    
             console.log("El contador es o sera mayor que el stock")
@@ -22,6 +22,10 @@ const ItemCount =(props)=>{
             setContador(contador-1)
         }
     }
+    const confirmarCarrito =()=>{
+        onAdd(contador)
+    }
+
     
     return (
         <div className="grupoBotonesCarritoContainer">
@@ -31,7 +35,7 @@ const ItemCount =(props)=>{
             <button onClick={aumentarContador}>+1</button>
             </div>
             <div className="botonCarritoContainer">
-                <button id="botonAñadirCarrito">Añadir al carrito</button>
+                <button onClick={confirmarCarrito} id="botonAñadirCarrito">Añadir al carrito</button>
             </div>
         </div>
     )
