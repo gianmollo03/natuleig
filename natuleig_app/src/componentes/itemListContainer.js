@@ -31,12 +31,11 @@ const ItemListContainer = (greeting)=>{
             {!loading
             ?
             <PageTemplate titulo="Productos" subtitulo={categoria}>
-                | <ItemList listaProductos = {listaProductos}/>
+             <ItemList listaProductos = {listaProductos}/>
             </PageTemplate>
             :
             <Text>Cargando...</Text>}
-            {greeting.greeting}
-            {/* <ItemCount stock={10} initial={0} onAdd=""/> */}
+
         </div>
         
     )
