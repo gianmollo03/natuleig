@@ -16,5 +16,6 @@ export const Item=({producto})=>{
                 
             </Button>
         </VStack>
+        
     )
 }
