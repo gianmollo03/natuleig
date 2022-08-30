@@ -11,9 +11,7 @@ export function CartContextProvider({children}){
     
     const [carrito,setCarrito] = useState([])
     
-    const estaEnCarrito = (id) =>{
-        carrito.find(prod=>prod.id === id)
-    }
+    const estaEnCarrito = (id) => carrito.find(prod=>prod.id===id)
 
     const añadirItemCarrito = (producto,cantidad) =>{
         if(estaEnCarrito(producto.id)){
@@ -28,11 +26,12 @@ export function CartContextProvider({children}){
             })
             setCarrito(nuevoCarrito)
             console.log(carrito)
+            
         }
         else{
             const nuevoProducto = {...producto,cantidad:cantidad}
             setCarrito([...carrito,nuevoProducto])
-            console.log(carrito)
+            
         }
     }
 
@@ -43,7 +42,6 @@ export function CartContextProvider({children}){
     const obtenerCantidad = () => carrito.reduce((acumulador,prod)=> acumulador+=prod.cantidad,0)
 
     const obtenerPrecioTotal = () => carrito.reduce((acumulador,prod)=> acumulador+=(prod.precio*prod.cantidad))
-
     return(
         <CartContext.Provider value={{
             carrito,

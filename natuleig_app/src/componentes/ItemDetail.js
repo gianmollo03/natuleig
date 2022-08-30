@@ -13,7 +13,6 @@ export const ItemDetail=({producto})=>{
         
         producto.contador = contador
         añadirItemCarrito(producto,producto.contador)
-        console.log(producto)
        
         
     }
