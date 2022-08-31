@@ -27,6 +27,12 @@
         display: flex;
         justify-content: flex-end;
     }
+    .CartWidget{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 #listaDeItems{

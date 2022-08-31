@@ -1,13 +1,16 @@
-import { Icon } from "@chakra-ui/react";
-import { useContext } from "react";
+
+import { IconButton } from "@chakra-ui/react";
 import { CartContext, useCarrito } from "../context/CartContext";
-import { Link } from "react-router-dom";
+import ShoppingCart from '../images/shopping-cart.png'
+import {FaShoppingCart} from 'react-icons/fa'
+ 
+
 
 const CartWidget = () =>{
     const {obtenerCantidad} = useCarrito()
     return(
         <div className="CartWidget">
-            
+            <FaShoppingCart></FaShoppingCart>           
             <p>{obtenerCantidad()}</p>
         </div>
     )
