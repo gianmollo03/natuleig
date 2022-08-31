@@ -1,7 +1,5 @@
 
-import { IconButton } from "@chakra-ui/react";
-import { CartContext, useCarrito } from "../context/CartContext";
-import ShoppingCart from '../images/shopping-cart.png'
+import { useCarrito } from "../context/CartContext";
 import {FaShoppingCart} from 'react-icons/fa'
  
 
