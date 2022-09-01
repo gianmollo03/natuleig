@@ -1,8 +1,7 @@
-export const CustomFetch = (productos) =>{
-    return new Promise ((resolve,reject)=>{
-        setTimeout(()=>{
-            resolve(productos)
-
-        },2000)
-    })
-}
+export const CustomFetch = (productos) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(productos);
+    }, 2000);
+  });
+};
