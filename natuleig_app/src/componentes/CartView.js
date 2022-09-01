@@ -1,15 +1,5 @@
-import {
-  Box,
-  Center,
-  HStack,
-  Image,
-  Input,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Center, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import { useCarrito } from "../context/CartContext";
-import React, { useContext } from "react";
-import { ProductoCarrito } from "./productosCarrito";
 
 export const CartView = () => {
   const { carrito } = useCarrito();

@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import ItemCount from "./ItemCount";
 import { Image } from "@chakra-ui/react";
 import { useCarrito } from "../context/CartContext";
@@ -6,8 +5,7 @@ import { useCarrito } from "../context/CartContext";
 export const ItemDetail = ({ producto }) => {
   const { añadirItemCarrito } = useCarrito();
   const onAdd = (contador) => {
-    producto.contador = contador;
-    añadirItemCarrito(producto, producto.contador);
+    añadirItemCarrito(producto, contador);
   };
   return (
     <>
