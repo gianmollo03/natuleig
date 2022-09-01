@@ -15,20 +15,26 @@ export const CartView = () => {
   const { carrito } = useCarrito();
   console.log(carrito);
   return (
-    <Center>
-      <VStack>
+    <VStack>
+      <Center>
         {carrito.map((prod) => {
-          {
-            console.log(prod);
-          }
-          <ProductoCarrito
-            id={prod.id}
-            nombre={prod.nombre}
-            image={prod.image}
-            cantidad={prod.cantidad}
-          ></ProductoCarrito>;
+          return (
+            <HStack
+              key={prod.id}
+              boxShadow="lg"
+              p="6"
+              rounded="md"
+              spacing={10}
+              bg="white"
+            >
+              <Image src={prod.image} w="100px"></Image>
+              <Text as="b">{prod.nombre}</Text>
+              <Text as="b">{prod.cantidad}</Text>
+              <Text as="b">{prod.precio}</Text>
+            </HStack>
+          );
         })}
-      </VStack>
-    </Center>
+      </Center>
+    </VStack>
   );
 };
