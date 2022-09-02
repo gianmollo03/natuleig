@@ -1,25 +1,13 @@
-import React from "react";
-import { DiBower } from "react-icons/di";
+import { useCarrito } from "../context/CartContext";
+import { FaShoppingCart } from "react-icons/fa";
 
-
-const CartWidget = (Logo)=>{
-    
-        if(Logo.type =='header'){
-            return(
-                <>
-                <a href="">
-                <img src="shopping-cart.png" alt="Carrito de compras" width={40} height={40} />
-                </a>
-
-                </>
-                
-            )
-        }
-        else if(Logo.type=='footer'){
-            return(
-                <DiBower/>
-            )
-        }
-    
-}
-export default CartWidget
+const CartWidget = () => {
+  const { obtenerCantidad } = useCarrito();
+  return (
+    <div className="CartWidget">
+      <FaShoppingCart></FaShoppingCart>
+      <p>{obtenerCantidad()}</p>
+    </div>
+  );
+};
+export default CartWidget;

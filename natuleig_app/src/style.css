@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: #FF8FB1;
+  background-color: #ff8fb1;
   padding: 10px 0;
 }
 .NavBarContainer .NavbarLogo {
@@ -27,6 +27,12 @@
   display: flex;
   justify-content: flex-end;
 }
+.NavBarContainer .CartWidget {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 #listaDeItems {
   display: flex;
@@ -36,7 +42,8 @@
   margin-top: 20px;
 }
 #listaDeItems .itemContainer {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 #listaDeItems .itemContainer .precioItem {
   font-weight: bold;
@@ -54,7 +61,7 @@
 }
 .detailProductContainer .detailProductChild {
   width: 30%;
-  background-color: #FCE2DB;
+  background-color: #fce2db;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -62,7 +69,8 @@
 }
 .detailProductContainer .detailProductChild h2 {
   font-size: 20px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .detailProductContainer .detailProductChild .detailProductName {
   font-size: 30px;
@@ -72,10 +80,28 @@
   text-align: center;
 }
 .detailProductContainer .detailProductChild .botonAgregarCarrito {
-  background-color: #B270A2;
+  background-color: #b270a2;
   margin: 10px 0;
   padding: 10px;
-  border-radius: 20PX;
+  border-radius: 20px;
+}
+
+.grupoBotonesCarritoContainer {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+}
+.grupoBotonesCarritoContainer .botonesContadorContainer {
+  display: flex;
+  flex-direction: row;
+}
+.grupoBotonesCarritoContainer .botonesContadorContainer button {
+  background-color: #b270a2;
+  padding: 0 15px;
+}
+.grupoBotonesCarritoContainer .botonesContadorContainer p {
+  padding: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

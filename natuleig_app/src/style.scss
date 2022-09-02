@@ -1,86 +1,107 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.NavBarContainer{
+.NavBarContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #ff8fb1;
+  padding: 10px 0;
+  .NavbarLogo {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    background-color: #FF8FB1;
-    padding: 10px 0;
-    .NavbarLogo{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 33%;
-    }
-    
-    .NavbarItems{
-        
-        width: 33%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .turnosContainer{
-        width: 33%;
-        display: flex;
-        justify-content: flex-end;
-    }
-}
+    justify-content: flex-start;
+    width: 33%;
+  }
 
-#listaDeItems{
+  .NavbarItems {
+    width: 33%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 20px;
-    .itemContainer{
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        .precioItem{
-            font-weight: bold;
-        }
-        .linkDetalle{
-            text-decoration: none;
-            color: white;
-        }
-
-    }
+  }
+  .turnosContainer {
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .CartWidget {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.detailProductContainer{
+#listaDeItems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  .itemContainer {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    .precioItem {
+      font-weight: bold;
+    }
+    .linkDetalle {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.detailProductContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  .detailProductChild {
+    width: 30%;
+    background-color: #fce2db;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    margin-top: 10px;
-    .detailProductChild{
-        width: 30%;
-        background-color: #FCE2DB;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        h2{
-            font-size: 20px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-        }
-        .detailProductName{
-            font-size: 30px;
-
-        }
-        .detailProductDesc{
-            width: 65%;
-            text-align: center;
-
-        }
-        .botonAgregarCarrito{
-            background-color: #B270A2;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 20PX;
-        }
+    h2 {
+      font-size: 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
     }
-    
-
+    .detailProductName {
+      font-size: 30px;
     }
+    .detailProductDesc {
+      width: 65%;
+      text-align: center;
+    }
+    .botonAgregarCarrito {
+      background-color: #b270a2;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.grupoBotonesCarritoContainer {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  .botonesContadorContainer {
+    display: flex;
+    flex-direction: row;
+    button {
+      background-color: #b270a2;
+      padding: 0 15px;
+    }
+    p {
+      padding: 0 10px;
+    }
+  }
+}

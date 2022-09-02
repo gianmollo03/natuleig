@@ -7,7 +7,11 @@ export const productos = [
     precio: 1860,
     categoria: "limpiador",
     descripcion:
+<<<<<<< HEAD
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum ornare pharetra. Duis nunc dui, ullamcorper id lacus ut, consequat tempus erat. Praesent tincidunt, leo ac viverra cursus, lacus mauris.",
+=======
+      "LECHE LIMPIADORA SUAVIZANTE ELIMINA MAQUILLAJE E IMPUREZAS Pieles normales, mixtas o secas y especialmente en pieles sensibles. Este cuidado limpiador esta desprovisto de agentes limpiadores agresivos y es de una suavidad extrema.",
+>>>>>>> 8b486c5c69465d27f965736c902cbcdca9275dbf
   },
   {
     id: 2,
@@ -17,7 +21,11 @@ export const productos = [
     precio: 1850,
     categoria: "limpiador",
     descripcion:
+<<<<<<< HEAD
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum ornare pharetra. Duis nunc dui, ullamcorper id lacus ut, consequat tempus erat. Praesent tincidunt, leo ac viverra cursus, lacus mauris.",
+=======
+      "Elimina el exceso de sebo, limpia impurezas y el maquillaje sin secar la piel, dejando la piel suave, luminosa y sin residuos.",
+>>>>>>> 8b486c5c69465d27f965736c902cbcdca9275dbf
   },
   {
     id: 3,
@@ -27,7 +35,11 @@ export const productos = [
     precio: 1760,
     categoria: "limpiador",
     descripcion:
+<<<<<<< HEAD
       "Suave espuma limpiadora que elimina impurezas, grasitud y restos de maquillaje sin irritar la piel. Posee extractos botánicos de manzanilla, Tilo, Caléndula y Hamamelis de acción descongestiva que elimina las rojeces.",
+=======
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum ornare pharetra. Duis nunc dui, ullamcorper id lacus ut, consequat tempus erat. Praesent tincidunt, leo ac viverra cursus, lacus mauris.",
+>>>>>>> 8b486c5c69465d27f965736c902cbcdca9275dbf
   },
   {
     id: 4,
