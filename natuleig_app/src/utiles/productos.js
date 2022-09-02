@@ -38,7 +38,7 @@ export const productos = [
     precio: 1920,
     categoria: "limpiador",
     descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum ornare pharetra. Duis nunc dui, ullamcorper id lacus ut, consequat tempus erat. Praesent tincidunt, leo ac viverra cursus, lacus mauris.",
+      "Suave espuma limpiadora profunda especialmente formulada para pieles seborreicas, con seborrea o acné. Limpia sin generar irritación, elimina impurezas, grasitud y restos de maquillaje,.Previene la aparición de brotes y mejora visiblemente la apariencia de la piel controlando el brillo y la grasitud.",
   },
   {
     id: 5,
@@ -48,6 +48,6 @@ export const productos = [
     precio: 1940,
     categoria: "exfoliantes",
     descripcion:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum ornare pharetra. Duis nunc dui, ullamcorper id lacus ut, consequat tempus erat. Praesent tincidunt, leo ac viverra cursus, lacus mauris.",
+      "Exfoliante facial y corporal. Remueve células de la superficie, impurezas y contaminantes dejando la piel suave y flexible.",
   },
 ];
