@@ -7,6 +7,7 @@ import { ItemDetailContainer } from "./ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartContextProvider } from "../context/CartContext";
 import { CartView } from "./CartView";
+import database from "./firebase";
 
 function App() {
   return (
@@ -53,5 +54,6 @@ function App() {
       </ChakraProvider>
     </>
   );
+  console.log(database);
 }
 export default App;
