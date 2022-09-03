@@ -3,7 +3,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
-import { PageTemplate } from "./Page";
 import database from "./firebase";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -31,10 +30,8 @@ const ItemListContainer = (greeting) => {
       });
   }, [categoria]);
   return (
-    <div id="listaDeItems">
-      <PageTemplate titulo="Productos" subtitulo={categoria}>
-        <ItemList listaProductos={listaProductos} />
-      </PageTemplate>
+    <div className="listaItems">
+      <ItemList listaProductos={listaProductos} />;
     </div>
   );
 };

@@ -34,23 +34,21 @@
   align-items: center;
 }
 
-#listaDeItems {
+.listaItems {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 20px;
+  width: auto;
+  justify-content: center;
 }
-#listaDeItems .itemContainer {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+.listaItems .itemContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40%;
 }
-#listaDeItems .itemContainer .precioItem {
-  font-weight: bold;
-}
-#listaDeItems .itemContainer .linkDetalle {
-  text-decoration: none;
-  color: white;
+.listaItems .itemContainer .imagenContainer {
+  margin: 0 10px;
 }
 
 .detailProductContainer {
@@ -69,8 +67,7 @@
 }
 .detailProductContainer .detailProductChild h2 {
   font-size: 20px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .detailProductContainer .detailProductChild .detailProductName {
   font-size: 30px;

@@ -13,20 +13,28 @@ export const Item = ({ producto }) => {
       minWidth="275px"
       className="itemContainer"
     >
-      <Image
-        className="imagenItem"
-        src={producto.image}
-        alt={producto.nombre}
-        w="200px"
-        height="200px"
-      />
-      <Text className="nombreItem">{producto.nombre}</Text>
-      <Text className="precioItem">{producto.precio}$</Text>
-      <Button colorScheme="pink" size="xs">
-        <NavLink to={`producto/${producto.id}`}>
-          <Link className="linkDetalle">Ver Detalle</Link>
-        </NavLink>
-      </Button>
+      <div className="imagenContainer">
+        <Image
+          className="imagenItem"
+          src={producto.image}
+          alt={producto.nombre}
+          w="200px"
+          height="200px"
+        />
+      </div>
+      <div>
+        <div className="nombreItemContainer">
+          <Text>{producto.nombre}</Text>
+        </div>
+        <div className="precioItemContainer">
+          <Text>{producto.precio}$</Text>
+          <Button colorScheme="pink" size="xs">
+            <NavLink to={`producto/${producto.id}`}>
+              <Link className="linkDetalle">Ver Detalle</Link>
+            </NavLink>
+          </Button>
+        </div>
+      </div>
     </VStack>
   );
 };
