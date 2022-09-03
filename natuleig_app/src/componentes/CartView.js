@@ -1,4 +1,5 @@
 import {
+  Button,
   Center,
   Divider,
   HStack,
@@ -96,6 +97,9 @@ export const CartView = () => {
           </Table>
         </TableContainer>
       </Center>
+      <div>
+        <Button> Continuar Compra</Button>
+      </div>
     </VStack>
   );
 };
