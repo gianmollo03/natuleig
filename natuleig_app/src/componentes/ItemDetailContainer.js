@@ -5,14 +5,21 @@ import { CustomFetch } from "../utiles/customFetch";
 import { ItemDetail } from "./ItemDetail";
 import { productos } from "../utiles/productos";
 import { useParams } from "react-router-dom";
+import database from "./firebase";
+import { collection, doc, getDocs } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
-    CustomFetch(productos).then((res) => {
-      setProducto(res.find((producto) => producto.id === parseInt(id)));
+    const productosCollection = collection(database, "productos");
+    const consulta = getDocs(productosCollection);
+    consulta.then((snapshot) => {
+      const productos = snapshot.docs.map((producto) => {
+        return { ...producto.data(), id: producto.id };
+      });
+      setProducto(productos.find((producto) => producto.id === id));
     });
   });
 

@@ -1,4 +1,4 @@
-export const productos = [
+/* export const productos = [
   {
     id: 1,
     image:
@@ -51,3 +51,4 @@ export const productos = [
       "Exfoliante facial y corporal. Remueve células de la superficie, impurezas y contaminantes dejando la piel suave y flexible.",
   },
 ];
+ */
