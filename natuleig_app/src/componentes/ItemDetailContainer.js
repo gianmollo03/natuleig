@@ -1,12 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { CustomFetch } from "../utiles/customFetch";
 import { ItemDetail } from "./ItemDetail";
-import { productos } from "../utiles/productos";
 import { useParams } from "react-router-dom";
 import database from "./firebase";
-import { collection, doc, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({});

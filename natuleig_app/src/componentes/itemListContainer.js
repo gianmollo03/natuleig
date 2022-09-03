@@ -1,13 +1,11 @@
 import React from "react";
-import { productos } from "../utiles/productos";
-import { CustomFetch } from "../utiles/customFetch";
+
 import { useEffect, useState } from "react";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import { PageTemplate } from "./Page";
 import database from "./firebase";
-import { collection, doc, getDocs } from "firebase/firestore";
-import { list } from "@chakra-ui/react";
+import { collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer = (greeting) => {
   const [listaProductos, setListaProductos] = useState([]);
