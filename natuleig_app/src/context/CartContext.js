@@ -30,7 +30,8 @@ export function CartContextProvider({ children }) {
   };
 
   const eliminarItemCarrito = (id) =>
-    setCarrito(carrito.filter((prod) => prod.id !== id));
+    setCarrito(carrito.filter((prod) => parseInt(prod.id) !== id));
+  console.log(carrito);
 
   const limpiarCarrito = () => setCarrito([]);
 
@@ -39,7 +40,8 @@ export function CartContextProvider({ children }) {
 
   const obtenerPrecioTotal = () =>
     carrito.reduce(
-      (acumulador, prod) => (acumulador += prod.precio * prod.cantidad)
+      (acumulador, prod) => (acumulador += prod.precio * prod.cantidad),
+      0
     );
   return (
     <CartContext.Provider
