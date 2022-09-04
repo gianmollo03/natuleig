@@ -1,5 +1,4 @@
 import { createContext, useState, useContext } from "react";
-import { Item } from "../componentes/Item";
 const CartContext = createContext([]);
 
 export const useCarrito = () => {
@@ -30,7 +29,7 @@ export function CartContextProvider({ children }) {
   };
 
   const eliminarItemCarrito = (id) =>
-    setCarrito(carrito.filter((prod) => parseInt(prod.id) !== id));
+    setCarrito(carrito.filter((prod) => prod.id !== id));
   console.log(carrito);
 
   const limpiarCarrito = () => setCarrito([]);

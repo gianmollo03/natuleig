@@ -54,6 +54,5 @@ function App() {
       </ChakraProvider>
     </>
   );
-  console.log(database);
 }
 export default App;
