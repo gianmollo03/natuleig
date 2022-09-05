@@ -56,9 +56,7 @@ export const CartView = () => {
                         <Text as="b">${prod.precio * prod.cantidad}</Text>
                       </Td>
                       <Td>
-                        <Button
-                          onClick={() => eliminarItemCarrito(parseInt(prod.id))}
-                        >
+                        <Button onClick={() => eliminarItemCarrito(prod.id)}>
                           <CloseIcon></CloseIcon>
                         </Button>
                       </Td>
