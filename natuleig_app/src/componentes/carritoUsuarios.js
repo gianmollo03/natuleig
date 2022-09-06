@@ -9,11 +9,8 @@ export const Usuarios = () => {
 
   const [apellido, setApellido] = useState("");
 
-  const [usuarios, setUsuarios] = useState([]);
   const [email, setEmail] = useState("");
   const { carrito, obtenerPrecioTotal } = useCarrito();
-
-  const nombreCompleto = `${nombre} ${apellido}`;
 
   const handleOnChangeNombre = (e) => {
     e.preventDefault();

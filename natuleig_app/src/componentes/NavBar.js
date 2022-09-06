@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../images/facial.png";
 import { NavLink } from "react-router-dom";
-import { HStack, Link } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 import CartWidget from "./CartWidget";
 function NavBar() {
   return (

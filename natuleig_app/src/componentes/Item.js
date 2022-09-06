@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "@chakra-ui/react";
+
 import { VStack, Button, Text, Image } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 export const Item = ({ producto }) => {
