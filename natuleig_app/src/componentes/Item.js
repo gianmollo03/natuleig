@@ -29,8 +29,8 @@ export const Item = ({ producto }) => {
         <div className="precioItemContainer">
           <Text>{producto.precio}$</Text>
           <Button colorScheme="pink" size="xs">
-            <NavLink to={`producto/${producto.id}`}>
-              <Link className="linkDetalle">Ver Detalle</Link>
+            <NavLink to={`producto/${producto.id}`} className="linkDetalle">
+              Ver Detalle
             </NavLink>
           </Button>
         </div>

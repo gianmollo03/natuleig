@@ -13,17 +13,17 @@ function NavBar() {
       </HStack>
       <HStack className="NavbarItems">
         <NavLink className="LinksNavbarContainer" to="categoria/limpiador">
-          <Link className="LinksNavbar">Limpiadores</Link>
+          Limpiadores
         </NavLink>
 
         <NavLink className="LinksNavbarContainer" to="categoria/exfoliantes">
-          <Link className="LinksNavbar">Exfoliantes</Link>
+          Exfoliantes
         </NavLink>
         <NavLink
           className="LinksNavbarContainer"
           to="consultas/consultar_turno"
         >
-          <Link className="LinksNavbar">Consultar turno</Link>
+          Consultar turno
         </NavLink>
       </HStack>
       <HStack>

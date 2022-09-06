@@ -7,7 +7,7 @@ export const useCarrito = () => {
 
 export function CartContextProvider({ children }) {
   const [carrito, setCarrito] = useState([]);
-
+  let [precioTotal, setPrecioTotal] = useState(0);
   const estaEnCarrito = (id) => carrito.find((prod) => prod.id === id);
 
   const añadirItemCarrito = (producto, cantidad) => {
@@ -25,12 +25,12 @@ export function CartContextProvider({ children }) {
     } else {
       const nuevoProducto = { ...producto, cantidad: cantidad };
       setCarrito([...carrito, nuevoProducto]);
+      console.log(carrito);
     }
   };
 
   const eliminarItemCarrito = (id) =>
     setCarrito(carrito.filter((prod) => prod.id !== id));
-  console.log(carrito);
 
   const limpiarCarrito = () => setCarrito([]);
 
