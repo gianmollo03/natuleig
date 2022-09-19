@@ -16,9 +16,11 @@ import {
 import { useCarrito } from "../context/CartContext";
 import { CloseIcon } from "@chakra-ui/icons";
 import { Usuarios } from "./carritoUsuarios";
+import { useEffect } from "react";
 
 export const CartView = () => {
-  const { carrito, eliminarItemCarrito, obtenerPrecioTotal } = useCarrito();
+  const { carrito, eliminarItemCarrito, obtenerPrecioTotal, limpiarCarrito } =
+    useCarrito();
   console.log(carrito);
   return (
     <VStack>
@@ -68,6 +70,9 @@ export const CartView = () => {
             </Tbody>
           </Table>
         </TableContainer>
+      </Center>
+      <Center>
+        <Button onClick={() => limpiarCarrito()}>Limpiar carrito</Button>
       </Center>
       <Center>
         <Text as="b">Total: ${obtenerPrecioTotal()}</Text>
