@@ -16,7 +16,6 @@ import {
 import { useCarrito } from "../context/CartContext";
 import { CloseIcon } from "@chakra-ui/icons";
 import { Usuarios } from "./carritoUsuarios";
-import { useEffect } from "react";
 
 export const CartView = () => {
   const { carrito, eliminarItemCarrito, obtenerPrecioTotal, limpiarCarrito } =
